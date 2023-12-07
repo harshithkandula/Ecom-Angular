@@ -6,6 +6,10 @@ import { UserComponent } from './user/user.component';
 import { Productv2Component } from './productv2/productv2.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 
+import { FormsModule } from '@angular/forms';
+import { ProductService } from './product.service';
+import { ProductV3Component } from './product-v3/product-v3.component';
+imports: [FormsModule, BrowserModule]
 
 @NgModule({
     declarations: [
@@ -13,8 +17,10 @@ import { ProductlistComponent } from './productlist/productlist.component';
       ProductComponent,
       UserComponent,
       Productv2Component,
-      ProductlistComponent
+      ProductlistComponent,
+      ProductV3Component
     ],
+    providers: [ProductService],
     imports: [],
     exports:[],
     bootstrap: [AppComponent]

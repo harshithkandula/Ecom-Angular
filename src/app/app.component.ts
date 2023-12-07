@@ -5,6 +5,7 @@ import { ProductComponent } from './product/product.component';
 import { UserComponent } from './user/user.component';
 import { Productv2Component } from './productv2/productv2.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { Product } from './model/product';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 })
 export class AppComponent {
   title = 'intro';
+ 
+  parentFunctionf1 = (evt:any) =>alert("Inside parent function f1()"+evt)
+
 }

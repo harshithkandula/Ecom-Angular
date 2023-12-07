@@ -2,3 +2,11 @@
 <p>Name: {{product.name}}</p>
 <div><img src={{product.image}}></div>
 <p>Price: {{product.Price}}</p>
+
+<br>
+Event binding
+
+<br>
+<button (click)="f1('button1')">click for truth</button>
+<button (mouseover)="f1('button2')">Hover to know</button>
+<button (click)="function2emitevt()">click to emit abc event</button>
