@@ -230,8 +230,17 @@
       <app-productv2 name="samsung" price="20000" abcEvent="parentFunctionf1($event)"></app-productv2>
       <app-productv2 name="Apple" price="90000"></app-productv2>
       <app-productlist></app-productlist>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <h1 [ngStyle]="{'font-size.px':100}">Hello, {{ title }}</h1>
+      
+      <p [ngClass]="{textborder: varx}">Congratulations! Your app is running. 🎉</p>
+      <br>
+      <app-productlistv3></app-productlistv3>
+      <div>
+        <app-addproduct></app-addproduct>
+      </div>
+      <div>
+        <app-productv4></app-productv4>
+      </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

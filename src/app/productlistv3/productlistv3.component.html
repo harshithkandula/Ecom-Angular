@@ -1,0 +1,30 @@
+<p>productlistv3 works!</p>
+<div style="border:2px solid blue">
+    List of products list version3 on Sale
+
+    <!-- <ul *ngFor="let prod of products" style="float: left;">
+        <li>{{prod.name}},{{prod.image}},{{prod.Price}}</li>
+
+     </ul> -->
+<div *ngIf="products.length>0"; else elseBlock>
+    <table border="2px solid">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let prod of products; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.Price}}</td>
+        </tr>
+     </table>
+</div> 
+<ng-template #elseBlock> No products on sale! visit Later</ng-template> 
+<!--<div *ngIf="products.length==0">
+    No products on sale! Shop Later
+</div> -->
+     
+</div>

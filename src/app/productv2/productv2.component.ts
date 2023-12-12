@@ -10,7 +10,7 @@ import { Product } from '../model/product';
   styleUrl: './productv2.component.css'
 })
 export class Productv2Component implements OnInit {
-  product:Product=new Product("Apple Iphone 15", 90000, "https://www.digitaltrends.com/wp-content/uploads/2023/09/iphone-15-pro-max-review-outside-leaves.jpg?resize=625%2C417&p=1");
+  product:Product=new Product(105,"Apple Iphone 15", 90000, "https://www.digitaltrends.com/wp-content/uploads/2023/09/iphone-15-pro-max-review-outside-leaves.jpg?resize=625%2C417&p=1");
 
   f1 = (arg1:string) => { console.log(`inside f1${arg1}`)}
 
