@@ -2,10 +2,10 @@
 <div style="border:2px solid blue">
     List of products list version3 on Sale
 
-    <!-- <ul *ngFor="let prod of products" style="float: left;">
+    <ul *ngFor="let prod of products" style="float: left;">
         <li>{{prod.name}},{{prod.image}},{{prod.Price}}</li>
 
-     </ul> -->
+     </ul>
 <div *ngIf="products.length>0"; else elseBlock>
     <table border="2px solid">
         <thead>
@@ -23,8 +23,8 @@
      </table>
 </div> 
 <ng-template #elseBlock> No products on sale! visit Later</ng-template> 
-<!--<div *ngIf="products.length==0">
+<div *ngIf="products.length==0">
     No products on sale! Shop Later
-</div> -->
+</div> 
      
 </div>

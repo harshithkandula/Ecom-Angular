@@ -14,8 +14,10 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { Productv4Component } from './productv4/productv4.component';
 import { Productlistv4Component } from './productlistv4/productlistv4.component';
 import { Productv4Service } from './productv4.service';
-import { RouterModule } from '@angular/router';
+import { RouterModule, provideRouter, withComponentInputBinding } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NosuchComponent } from './nosuch/nosuch.component';
+import { routes } from './app.routes';
 
 imports: [FormsModule, BrowserModule, ReactiveFormsModule]
 
@@ -30,10 +32,11 @@ imports: [FormsModule, BrowserModule, ReactiveFormsModule]
       Productlistv3Component,
       AddproductComponent,
       Productv4Component,
-      Productlistv4Component
+      Productlistv4Component,
+      NosuchComponent
     ],
-    providers: [ProductService, Productv4Service],
-    imports: [FormsModule, BrowserModule, HttpClientModule, ReactiveFormsModule, RouterModule],
+    providers: [ProductService, Productv4Service, provideRouter(routes, withComponentInputBinding())],
+    imports: [FormsModule, BrowserModule, HttpClientModule, ReactiveFormsModule, RouterModule.forRoot(routes)],
     exports:[RouterModule],
     bootstrap: [AppComponent]
 })

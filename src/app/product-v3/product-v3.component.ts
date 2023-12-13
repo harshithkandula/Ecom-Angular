@@ -19,12 +19,13 @@ export class ProductV3Component {
     this.product=this.productService.getProduct(1);
   }
 
-  @Input("id")
-  id:string='';
+  @Input("xyz")
+  xyz!:string='';
 
   ngOnInit():void{
-    this.product.id=Number(this.id)
-    this.product=this.productService.getProduct(this.product.id);
+    console.log("Inside ngOnInit() id="+this.xyz); 
+    this.product.id=Number(this.xyz)
+    this.product=this.productService.getProduct(Number(this.xyz));
   }
 
 }
