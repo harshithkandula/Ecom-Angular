@@ -11,13 +11,14 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { Productv4Component } from './productv4/productv4.component';
 import { Productlistv4Component } from './productlistv4/productlistv4.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductV3Component } from './product-v3/product-v3.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ProductComponent, UserComponent, Productv2Component, ProductlistComponent, Productlistv3Component, AddproductComponent, Productv4Component, Productlistv4Component, HttpClientModule, RouterModule],
+  imports: [CommonModule, RouterOutlet, ProductComponent, UserComponent, Productv2Component, ProductlistComponent, Productlistv3Component, AddproductComponent, Productv4Component, Productlistv4Component, HttpClientModule, RouterModule, ProductV3Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
